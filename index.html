@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>個人網站</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>個人網頁</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #EAF4F4;
+      color: #033649;
+    }
+
+    header {
+      background-color: #33A6B8;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    section {
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 800px;
+      background-color: #FFFFFF;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #33A6B8;
+      border-bottom: 2px solid #33A6B8;
+      padding-bottom: 5px;
+    }
+
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      width: 150%;
+      max-width: 800px;
+      height: 500px; /* Adjusting the height for better visibility */
+      margin: 0 auto;
+      border-radius: 8px;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures images fill the space without being cropped */
+      display: none;
+    }
+
+    .carousel img.active {
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      padding: 10px 0;
+      background-color: #33A6B8;
+      color: white;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #33A6B8;
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #FFC107;
+    }
+
+    body {
+      scroll-behavior: smooth;
+      padding-top: 60px;
+    }
+
+    nav a.active {
+      border-bottom: 2px solid #FFC107;
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="#basic-info">基本資料</a>
+  <a href="#pets">寵物</a>
+  <a href="#favorite-music">電影配樂</a>
+  <a href="#contact">聯絡方式</a>
+</nav>
+<header>
+  <h1>歡迎來到我的個人網頁</h1>
+</header>
+<section id="basic-info">
+  <h2>基本資料</h2>
+  <p>姓名：林瑀安</p>
+  <p>生日：3月28日</p>
+  <p>年齡：18</p>
+  <p>興趣：漫畫、電玩、音樂劇電影</p>
+</section>
+<section id="pets">
+  <h2>寵物</h2>
+  <p>我家有養兩隻貓^_−☆</p>
+  <div class="carousel" id="pet-carousel">
+    <img src="https://cdn.discordapp.com/attachments/844520926270849035/1324743597882343524/remix-96d9079d-d22e-4e23-9d78-3477c307d006.png?ex=6779431e&is=6777f19e&hm=349a78f0536e77b45e03f222d6ef900e6dddee4e289748beff0cdbc05cd2fdd5&" alt="Pet 1" class="active">
+    <img src="https://cdn.discordapp.com/attachments/844520926270849035/1324743347700764723/IMG_4973.jpg?ex=677942e2&is=6777f162&hm=58e7dc5407119c5252fdfadb99dae5c69fa670bb4cf29021392a8ea630b07dcd&" alt="Pet 2">
+
+  </div>
+</section>
+<section id="favorite-music">
+  <h2>電影配樂</h2>
+  <ul class="link-list">
+    <li><a href="https://youtu.be/_8w9rOpV3gc?si=VT0NU64pBndXw95y">La La Land - A Lovely Night Scene</a></li>
+    <li><a href="https://youtu.be/xVVqlm8Fq3Y?si=-5bCC9qV_Q1v13Md">La La Land - Another Day of Sun</a></li>
+    <li><a href="https://youtu.be/gdjR2lvIfJ4?si=TgkyRQfYkvar2KMO">The Greatest Showman Cast - Rewrite The Stars</a></li>
+  </ul>
+</section>
+<section id="contact">
+  <h2>聯絡方式</h2>
+  <p>電子信箱：anita950328@gmail.com</p>
+  <p>Line ID：Anita950328</p>
+</section>
+<footer>
+  <p>&copy; 2025 嘉義大學 1133837 林瑀安</p>
+</footer>
+<script>
+  const images = document.querySelectorAll('.carousel img');
+  let currentIndex = 0;
+
+  function showNextImage() {
+    images[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].classList.add('active');
+  }
+
+  setInterval(showNextImage, 5000);
+</script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

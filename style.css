@@ -1,0 +1,40 @@
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #33A6B8;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+  color: #4FB5C9; 
+  transform: scale(1.1);
+}
+
+body {
+  scroll-behavior: smooth; 
+  padding-top: 60px; 
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color: #E5F4F8; 
+}
+
+nav a.active {
+  border-bottom: 3px solid #4FB5C9; 
+  padding-bottom: 2px;
+}
